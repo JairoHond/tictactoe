@@ -19,7 +19,6 @@ from game.views import game
 from game.views import index
 
 urlpatterns = [
-## ... Other URLS
-path('', index),
-path('play/<room_code>', game),
+    path('', index),
+    path('play/<room_code>', game),
 ]

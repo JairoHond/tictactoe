@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import Http404
 
+
 def index(request):
     if request.method == "POST":
         room_code = request.POST.get("room_code")
@@ -10,6 +11,7 @@ def index(request):
             % (room_code, char_choice)
         )
     return render(request, "index.html", {})
+
 
 def game(request, room_code):
     choice = request.GET.get("choice")
